@@ -1,0 +1,39 @@
+Ejercitación 1 - Responder el siguiente cuestionario
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+HTML (HyperText Markup Language) es el lenguaje utilizado para definir la estructura de los documentos que se publican en la Web. 
+Fue desarrollado inicialmente por Tim Berners-Lee a principios de la década de 1990.
+Las versiones principales han sido:
+HTML 2.0 (1995)
+HTML 3.2 (1997)
+HTML 4.0 (1997)
+HTML 4.01 (1999)
+XHTML 1.0 (2000)
+Actualmente, la versión moderna y ampliamente utilizada es HTML5
+
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos
+con HTML?
+Son los siguientes:
+-Separar contenido, presentación y comportamiento.
+-Utilizar etiquetas semánticas apropiadas.
+-Garantizar la accesibilidad universal.
+-Mantener compatibilidad entre navegadores.
+-Validar el código según los estándares.
+-Favorecer la internacionalización.
+-Diseñar pensando en la evolución futura de la Web.
+
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y
+obsoleto?
+-- Desaprobado: sigue funcionando, pero su uso ya no se recomienda porque existe una alternativa mejor.
+-- Obsoleto: ha sido eliminado del estándar y no debe utilizarse en nuevos desarrollos.
+
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+El DTD (Document Type Definition) define la estructura y las reglas que debe seguir un documento HTML.
+
+HTML 4.01 contempla tres DTD:
+- Strict: excluye elementos y atributos de presentación.
+- Transitional: permite elementos obsoletos para facilitar la transición.
+- Frameset: incluye soporte para marcos (frames).
+
+5. Qué son los metadatos y cómo se especifican en HTML?
+Los metadatos son información sobre el documento que no se muestra directamente en la página. Permiten definir la codificación, describir el contenido y proporcionar información útil para navegadores y motores de búsqueda
+Se incluyen dentro del elemento <head> mediante etiquetas <meta>.
