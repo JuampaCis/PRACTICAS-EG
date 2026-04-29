@@ -1,0 +1,40 @@
+3.a) <a href="http://www.google.com.ar">Click aquí para ir a Google</a>  **Abre google en la misma pestaña
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>  **Abre google en una nueva pestaña
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">   **visualmente es igual al primero
+<a href="#">Click aquí para ir a Google</a>   **No abre otra página, te lleva al inicio del documento
+<a href="#arriba">Click aquí para volver arriba</a>   **Se desplaza hasta el elemento cuyo ID es "arriba"
+<a name="arriba" id="arriba"></a>   ** Marca la posición a la que apunta el enlace interno anterior
+
+3.b) <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>  **Solo el texto es lickeable
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>   **Solo la imagen funciona como enlace
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>    **Tanto la imagen como el texto funcionan como enlace
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>   **Imagen y texto son enlaces separados, aunque apuntan a la misma dirección
+
+3.c 
+ 1) <ol> Muestra una lista de elementos desordenados con viñetas
+ 2) <ul> Muestra una lista ordenada
+ 3) Son 3 listas ordenadas independientes. el atributo value fuerza el número inicial de cada elemento. Visualmente parace una lista sola
+ 4) No es una lista real en si, aunque visualmente lo parezca. Fué numerada manualmente; <br> solo realiza saltos de linea y <blockquote> agrega sangria. 
+
+3.d
+ 1) <th> Usa celdas de encabezado semánticas; el navegador aplica negrita y centrado automaticamente
+ 2) Simula visualmente encabezado, pero semanticamente sigue siendo una selda común con ciertos atributos
+
+3.e
+ 1) <caption>titulo</caption> Usa el elemento especifico para el título; El navegador lo ubica automáticamente
+ 2) <td colspan="3">Título</td> El título forma parte de la tabla, se unifican las 3 columnas (ocupa toda la primera fila)
+
+3.f 
+ 1) Una celda ocupa dos filas
+ 2) Una celda ocupa dos columnas
+
+3.g 
+ 1) Usa colspan y rowspan simultaneamente creando una celda grande. Utiliza cellpadding="0" y cellspacing="0" que eliminan espacios internos y externos entre celdas
+ 2) Solo usa rowspan
+
+3.h
+ 1) Utiliza el método POST; los datos no aparecen en la URL; Oculta los caracteres de la contraseña con type="password". (Ideal para forms con info sensible)
+ 2) Utiliza GET; los datos viajan en la URL; los caracteres de la contraseña se ven mientras se escribe; también usa SUBMIT
+ 
+ 
+ 
