@@ -1,4 +1,4 @@
-Ejercitación 1 - Responder el siguiente cuestionario
+Ejercitación 1 ---------------------------------------------------------------------------------------------------- Responder el siguiente cuestionario
 1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
 HTML (HyperText Markup Language) es el lenguaje utilizado para definir la estructura de los documentos que se publican en la Web. 
 Fue desarrollado inicialmente por Tim Berners-Lee a principios de la década de 1990.
@@ -37,3 +37,59 @@ HTML 4.01 contempla tres DTD:
 5. Qué son los metadatos y cómo se especifican en HTML?
 Los metadatos son información sobre el documento que no se muestra directamente en la página. Permiten definir la codificación, describir el contenido y proporcionar información útil para navegadores y motores de búsqueda
 Se incluyen dentro del elemento <head> mediante etiquetas <meta>.
+
+EJERCITACIÓN 2 ------------------------------------------------------------------------------------------------------------------
+2.a) <!-- Código controlado el día 12/08/2009 -->
+    **Comentario HTML que no se muestra en el navegador; puede ubicarse en cualquier parte del documento; etiquedas: <!-- y -->; Atributos: no posee
+
+2.b) <div id="bloque1">Contenido del bloque1</div>
+   **Define un bloque o contenedor de tipo genérico; se ubica dentro del <body>; etiquetas: <div> y </div>; atributos: id="bloque1" identificador único (opcional)
+
+2.c) <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+   **Elemento IMG inserta una imagen; se ubica dentro del <body>; etiqueta: <img /> (no lleva cierre); atributos: src="" (URL de la imagen, obligatorio), alt="" (texto alternativo), id="im1" (identificador opc), name="im1" (nombre opc), width="32" (ancho opc), height="32" (alto opc), longdesc="detalles.htm" (descripción extensa opc)
+
+2.d) <meta name="keywords" lang="es"
+      content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires"
+      content="16-Sep-2019 7:49 PM" />
+
+   ** Ámbos se ubican dentro del <head> y definen metadatos del documento. Proporciona información sobre la página a navegadores, buscadores sin mostrarse al usuario
+   ** ATRIBUTOS PRIMER META: Name="keywords" Palabras clave, indica el tipo de metadato; lang="es", Indica el lenguaje (español); content="casa, compra, venta, alquiler", lista de palabras clave (obligatorio cuando se usa name)
+   ** ATRIBUTOS SEGUNDO META: http-equiv="expires" indica fecha esfecificada de expiración; content="16-Sep-2019 7:49 PM" Esteblece fecha y hora exactas de expiración, es obligatorio.
+
+2.e) <a href="http://www.e-style.com.ar/resumen.html"
+   type="text/html"
+   hreflang="es"
+   charset="utf-8"
+   rel="help">Resumen HTML</a>
+
+   **La etiqueta <a> crea un hipervinculo y se ubica dentro del <body>; etiquetas: <a> y </a> (obligatorios); atributos: href="" (destino del enlace, obligatorio), type="text/html" (indica el tipo de contenido), hreflang="es" (idioma del recurso opc), charset="utf-8" (codificacion opc), rel="help" (relación con el documento actual)
+
+2.f) <table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+**Estas etiquetas crean una tabla y se ubican dentro del <body>; etiquetas: <table> (tabla principal), <caption> (título de la tabla), <tr> (fila), <th> (celda de encabezado), <td> (celda de datos); Atributos: width="200" (ancho opc), summary="" (descripcion para accesibilidad), align="top" (posición del título opc), scope="col" (encabezado de columna opc), scope="row" (encabezado de fila opc)
+
+
+
+
+  
