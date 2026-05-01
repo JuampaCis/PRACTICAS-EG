@@ -34,7 +34,20 @@
 
 3.h
  1) Utiliza el método POST; los datos no aparecen en la URL; Oculta los caracteres de la contraseña con type="password". (Ideal para forms con info sensible)
- 2) Utiliza GET; los datos viajan en la URL; los caracteres de la contraseña se ven mientras se escribe; también usa SUBMIT
+ 2) Utiliza GET; los datos viajan en la URL; Action esta vacío, por lo tanto los datos se envian a si mismo; los caracteres de la contraseña se ven mientras se escribe; también usa SUBMIT
+ 3) Envía los datos por correo electronico; caracteristicas similares a 1) con la diferecia del boton type:"reset", aunque el texto dice envíar solo limpiara los campos del formulario, no enviará nada. 
+
+3.i
+ 1) <button> es más flexible. Permite incluir imágenes, texto y otros elementos HTML.
+ 2) <input> es más simple, solo permite agregar texto con el atributo 'value'.
+
+3.J
+ 1) el valor del atributo 'name' es el mismo, por lo que pertenecen al mismo grupo. Solo puedo seleccionar una sola opción. Se usa cuando las opciones son mutuamente excluyentes (ej. sexo)
+ 2) el valor del atributo 'name' es distinto, son grupos independientes. Por lo tanto pueden seleccionarse ambos al mismo tiempo, marcar uno no afecta al otro.
+
+3.K
+ 1) Se muestra como un campo desplegable pero solo se puede selccionar uno
+ 2) Ya no se muestra como campo desplegable, sino como lista. Se puede seleccionar varias opciones debido a que el valor del atributo name="lista[]" asi lo permite y también por el valor del atributo multiple. 
  
  
  
