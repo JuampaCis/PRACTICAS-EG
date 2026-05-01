@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Año 2026 - Exámenes</title>
+</head>
+<body>
+    <a href="https://www.frro.utn.edu.ar" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/UTN_logo.jpg" alt="Logo UTN" width="80">
+    </a>
+
+    <hr style="height: 2px; background-color: black; border: none;">
+
+    <!-- Título -->
+    <h1>AÑO 2026</h1>
+
+    <table border="1" cellpadding="5" cellspacing="0" width="450">
+        <tr>
+            <th colspan="2">Exámenes</th>
+        </tr>
+        <tr>
+            <td>Fecha: ................................</td>
+            <td align="center">
+                Aprobados<br>
+                24/30
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <ol>
+        <li>
+            <a href="#enunciado">Enunciado del examen</a>
+        </li>
+        <li>
+            <a href="resolucion.html" target="_blank">Resolución</a>
+        </li>
+    </ol>
+
+    <br>
+
+    <p>Puede realizar consultas completando el siguiente formulario:</p>
+
+
+    <form action="mailto:xx@xx.com" method="post" enctype="text/plain">
+        <table>
+            <tr>
+                <td><b>e-mail:</b></td>
+                <td>
+                    <input type="email" name="email" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>consulta:</b></td>
+                <td>
+                    <textarea name="consulta" rows="6" cols="28"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <input type="submit" value="ENVIAR">
+        <input type="reset" value="BORRAR">
+    </form>
+
+    <br><br>
+
+
+    <h2>Enunciado del examen</h2>
+
+    <p>
+        Ejercicio 1: ............................................<br>
+        ............................................
+    </p>
+
+    <p>
+        Ejercicio 2: ............................................<br>
+        ............................................
+    </p>
+
+    <br>
+
+    <p>
+        Para más información dirigirse a
+        <a href="mailto:contacto@xx.com">contacto@xx.com</a>
+    </p>
+
+</body>
+</html>
