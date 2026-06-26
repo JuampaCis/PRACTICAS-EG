@@ -1,0 +1,15 @@
+1. ¿QUÉ ES CSS Y PARA QUÉ SE USA?
+CSS (Cascading Style Sheets o Hojas de Estilo en Cascada) es un lenguaje utilizado para definir la apariencia visual de una página web creada con HTML. Permite separar 
+el contenido de la presentación, facilitando el mantenimiento del sitio y logrando un diseño uniforme. Permite modificar colores, fuentes, márgenes, tamaños, etc.
+
+2. CSS UTILIZA REGLAS PARA LAS DECLARACIONES DE ESTILO. ¿CÓMO FUNCIONA?
+Cada regla CSS posee dos partes:
+      Selector: indica sobre qué elemento HTML se aplicará el estilo.
+      Bloque de declaraciones: contiene una o varias propiedades con sus respectivos valores.
+
+3. ¿CUÁLES SON LAS 3 FORMAS DE DAR ESTILO A UN DOCUMENTO?
+    A) En linea: dentro de cada elemento HTML con el atributo Style
+    B) CSS interno: Dentro de las etiquetas <style> ubicados en el documento debajo de los metadatos
+    B) CSS externo: Es un archivo .css independiente. Se lo vincula a nuestro doc HTML mediante <link rel="stylesheet" href="estilo.css">
+
+4. ¿Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique
