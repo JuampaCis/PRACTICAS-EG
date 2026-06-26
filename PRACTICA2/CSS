@@ -12,4 +12,118 @@ Cada regla CSS posee dos partes:
     B) CSS interno: Dentro de las etiquetas <style> ubicados en el documento debajo de los metadatos
     B) CSS externo: Es un archivo .css independiente. Se lo vincula a nuestro doc HTML mediante <link rel="stylesheet" href="estilo.css">
 
-4. ¿Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique
+4. ¿CUÁLES SON LOS DISTINTOS TIPOS DE SELECTORES MÁS UTILIZADOS? EJEMPLIFIQUE
+Los selectores indican qué elementos del documento HTML serán afectados por una regla CSS. Los más utilizados son:
+      Selector de elemento: Selecciona todas las etiquetas del mismo tipo, ej: p{ color:red; }
+      Selector de clase: Selecciona todos los elementos que poseen una determinada clase, ej: .importante{ color:red; }
+      Selector por ID: Selecciona un único elemento identificado mediante un atributo id, ej: #menu{ background-color:gray; }
+      Selector universal: Selecciona todos los elementos del documento, ej: *{ margin:0; }
+      Selector agrupado: Permite aplicar la misma regla a varios elementos, ej: h1,h2,h3{ color:red; }
+
+5. ¿QUÉ ES UNA PSEUDO-CLASE?¿CUÁLES SON LAS MÁS UTILIZADAS APLCIADAS A VÍNCULOS?
+Una pseudo-clase permite aplicar estilos a un elemento dependiendo de su estado. Las más utilizadas para los enlaces son:
+      a:link  --> Aplica el estilo a un enlace que aún no fue visitado.
+      a:visited --> Aplica el estilo a un enlace ya visitado.
+      a:hover --> Se activa cuando el usuario pasa el cursor sobre el enlace.
+      a:active --> Se aplica mientras el usuario hace clic sobre el enlace.
+
+6. ¿QUÉ ES LA HERENCIA?
+La herencia es el mecanismo por el cual algunos estilos definidos para un elemento padre son heredados automáticamente por sus elementos hijos.
+Por ejemplo, si se define una fuente para el elemento <body>, todos los elementos contenidos dentro del documento utilizarán esa fuente, salvo que se indique otra diferente.
+
+7. ¿EN QUÉ CONSISTE EL PROCESO DENOMINADO CASCADA?
+La cascada es el mecanismo que utiliza CSS para decidir qué regla aplicar cuando existen varias reglas sobre un mismo elemento.
+Cuando dos o más reglas afectan al mismo elemento, el navegador considera la prioridad de cada una.
+En términos generales, la prioridad es:
+      Estilo en línea (style).
+      Identificadores (id).
+      Clases.
+      Selectores de elementos.
+
+EJERCICIO 2. ANALIZAR EL CÓDIGO
+      p#normal --> El selector indica que solo se aplicará al elemento <p> cuyo id sea "normal". Dicho elemento se mostrará con letra Arial, tamaño 11 px y en negrita.
+      *#destacado --> indica que cualquier elemento cuyo id sea "destacado" recibirá los estilos definidos. Tanto el párrafo como la tabla que poseen ese identificador 
+aparecerán con un borde azul.
+      #distinto --> Afecta al elemento cuyo identificador es distinto.
+
+EJERCICIO 3. 
+p.quitar{ color:red; } --> se aplica únicamente a los elementos <p> que tengan asignada la clase quitar. Efecto: el texto del párrafo será de color rojo.
+*.desarrollo{ font-size:8px; } --> se aplica a cualquier elemento HTML que tenga la clase desarrollo. Efecto: el tamaño de letra será de 8 px.
+.importante{ font-size:20px; } --> Se aplica a cualquier elemento que tenga esa clase. Efecto: tamaño de letra de 20 px.
+
+EJERCICIO 4.
+En el primer código, la clase ´contenido´ se aplica solamente al párrafo, por lo que el resto de la página no recibe esos estilos.
+En el segundo código, la clase ´contenido´ se aplica al <body>, haciendo que gran parte del documento herede el tamaño de fuente y la negrita, salvo 
+los elementos que poseen reglas específicas.
+
+EJERCICIO 5. 
+      a) h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {   color:red;   }
+      b) div p [href] {  color:black;  }
+      c) #ultimo ul{ color:yellow; }
+         #ultimo ul a{  color:blue;  }
+      d) div #importante {  color:green;  }
+         h1 #importante, h2 #importante, h3 #importante, h4 #importante, h5 #importante, h6 #importante {  color:red;  }
+      e) h1[title]{  color:blue;  }
+      f) ol a:link{  color:blue; text-decoration:none;  }
+         ol a:visited{  color:violet; text-decoration:none;  }
+
+EJERCICIO 6. CAMBIOS QUE SE DEBE REALIZAR PARA OBTENER EL MISMO RESULTADO CON LA HOJA EXTERNA.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Página Principal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="estilo2.css">
+</head>
+
+<body>
+<div id="encabezado">
+    <h1>ASIGNATURA ELECTIVA</h1>
+</div>
+<div id="contenido">
+    <h2>Contenido</h2>
+    <p>En esta asignatura ...........................<br></p>
+    <p>El objetivo fundamental ..................</p>
+    <p>etc., etc., ...........................................</p>
+    <p>etc., etc., ...........................................</p>
+    <p>Además, ...........................................</p>
+    <p>etc., etc., ...........................................</p>
+    <p class="resaltado">
+        Pero, lo más importante es ..............................
+    </p>
+    <p class="resaltado">
+        etc., etc., ...........................................
+    </p>
+    <p>Y, entonces, podemos continuar con ..................</p>
+    <p>etc., etc., ...........................................</p>
+    <p>&nbsp;</p>
+</div>
+<div id="menu">
+    <h3>Enlaces</h3>
+    <ul class="vineta">
+        <li>
+            <a href="http://www.e-style.com.ar/moodle" target="_blank">
+                Curso Actual
+            </a>
+        </li>
+        <li>
+            <a href="http://www.e-style.com.ar/logica" target="_blank">
+                Curso anterior
+            </a>
+        </li>
+        <li>
+            <a href="http://www.e-style.com.ar/ntedu/consultas.htm" target="_blank">
+                Contacto
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="pie" class="estilopie">
+    Ingeniería en Sistemas de Información - Universidad Tecnológica Nacional Rosario
+</div>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
