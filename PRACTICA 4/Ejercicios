@@ -33,4 +33,30 @@ integer
   c) Sí, ambos códigos son equivalentes, ya que para los mismos valores de la variable $i producen exactamente la misma salida
 
 3) EXPLICAR CÓDIGO
-  a) 
+  a) Crea una tabla automaticamente compuesta por 5 filas y 2 columnas
+  b) Muestra un formulario para ingresar una edad, y luego la evalua mostrando si la persona es mayor o menor de edad
+
+4) Antes del INCLUDE las varaibles todavia no existen, por lo que imprime "El    ". Después del include las varaibles quedan definidas por lo cuál imprime "el clavel blanco"
+
+PARTE 2 ---------------------------------------------------------------------------------------------------------
+1) Si, las dos formas crean exactamente el mismo array.
+2) Indicar las salidas correspondientes:
+  a) bar1  (true se imprime como 1)
+  b) 5942
+  c) no produce salida, pues al final termina borrando por completo el array
+
+3) 
+  a) Imprime algo similar a: Has entrado en esta página a las 18 horas con 30 minutos y 15 segundos del 26/6/2026
+  b) 5+6=11
+
+4) Verifica que un nombre de usuario sea válido. Ejemplo de script para probar su funcionamiento
+<?php
+
+comprobar_nombre_usuario("Juan");
+comprobar_nombre_usuario("ab");
+comprobar_nombre_usuario("Juan@123");
+comprobar_nombre_usuario("Usuario_2026");
+comprobar_nombre_usuario("Nombre-Muy-Largo-De-Prueba");
+
+?>
+
