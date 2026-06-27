@@ -1,0 +1,150 @@
+PARTE 1 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1) ¿A qué nos referimos al hablar de Arquitectura de la Información y cuáles son los ítems principales que constituyen su metodología?
+La Arquitectura de la Información es la disciplina encargada de organizar, estructurar y presentar la información de un sitio web para que los usuarios puedan encontrarla 
+y utilizarla de forma sencilla. Su finalidad es construir un sitio claro, ordenado y fácil de navegar, teniendo en cuenta tanto las necesidades de los usuarios como los 
+objetivos de la organización. Comprende los siguientes ítems principales:
+  - Definir los objetivos del sitio.
+  - Identificar y analizar la audiencia.
+  - Definir los escenarios de uso.
+  - Determinar y organizar los contenidos.
+  - Agrupar y etiquetar la información.
+  - Identificar los requerimientos funcionales.
+  - Diseñar la estructura o árbol de contenidos.
+  - Definir el sistema de navegación.
+
+2) ¿Cuál es la ventaja de tener identificados y definidos los objetivos del sitio?
+Definir claramente los objetivos permite orientar todo el desarrollo del sitio. Gracias a ello es posible determinar qué información debe publicarse, qué funcionalidades
+incorporar, cómo organizar los contenidos y a qué público estará dirigido. Además, los objetivos sirven como criterio para tomar decisiones durante el desarrollo y 
+para evaluar posteriormente si el sitio cumple con los resultados esperados.
+
+3) ¿Qué es la audiencia?
+La audiencia es el conjunto de personas a quienes está dirigido el sitio web. Conocer la audiencia permite adaptar el contenido, el lenguaje, el diseño y las 
+funcionalidades según las características y necesidades de los usuarios.
+
+4) ¿Según qué tipos de características se deben analizar las audiencias?
+La guía indica que la audiencia debe analizarse considerando distintas características, entre ellas:
+	- características demográficas (edad, sexo, nivel educativo);
+	- conocimientos tecnológicos y experiencia en Internet;
+	- intereses y necesidades de información;
+	- frecuencia de uso del sitio;
+	- objetivos con los que acceden al sitio;
+	- contexto desde el cual utilizan el sitio (hogar, trabajo, dispositivos, velocidad de conexión, etc.).
+
+5) ¿Qué son los escenarios de uso?
+Los escenarios de uso son descripciones de situaciones concretas en las que un usuario utiliza el sitio web para cumplir un determinado objetivo.
+Estos escenarios permiten comprender cómo interactuarán los usuarios con el sistema y ayudan a diseñar interfaces y funcionalidades acordes con sus necesidades.
+
+6) ¿Cuáles deberían ser los contenidos indispensables de un sitio web?
+Aunque cada sitio posee contenidos específicos según su finalidad, la guía indica que normalmente deberían incluirse:
+	- información institucional
+	- descripción de productos o servicios
+	- información de contacto
+	- novedades o noticias
+	- preguntas frecuentes
+	- formularios o trámites cuando correspondan
+	- mecanismos de ayuda
+	- información legal y de privacidad
+
+7) ¿Cuáles son los requerimientos funcionales más frecuentes en un sitio web?
+Los más frecuentes son:
+	- formularios de contacto
+	- buscador interno
+	- registro y autenticación de usuarios
+	- consultas y trámites en línea
+	- descarga de archivos
+	- envío de información mediante formularios
+	- suscripción a servicios o boletines
+	- impresión de contenidos
+	- integración con bases de datos y otros sistemas
+
+8) Al definir la estructura de un sitio, ¿cuáles son los dos aspectos fundamentales que se deben considerar?
+Al definir la estructura deben considerarse dos aspectos fundamentales:
+	- La organización de los contenidos, agrupándolos de forma lógica para facilitar su comprensión.
+	- El sistema de navegación, que permitirá a los usuarios desplazarse por el sitio de forma simple, rápida e intuitiva, encontrando fácilmente la información que necesitan.
+
+9) ¿Qué es un árbol de contenidos?
+El árbol de contenidos es una representación gráfica y jerárquica de la estructura del sitio web. Organiza toda la información en distintos niveles, mostrando la relación entre 
+la página principal y las secciones, subsecciones y páginas internas.
+Su objetivo es facilitar la organización de los contenidos antes de comenzar el diseño y el desarrollo del sitio, permitiendo verificar que toda la información esté correctamente 
+distribuida y que el acceso sea sencillo para el usuario.
+
+10) ¿Qué es un sistema de navegación?
+El sistema de navegación es el conjunto de elementos que permite al usuario desplazarse por las distintas páginas y secciones de un sitio web.
+Su función principal es facilitar el acceso a la información, permitiendo que el usuario encuentre rápidamente lo que busca sin perderse dentro del sitio.
+
+11) ¿Cuáles son los sistemas de navegación más utilizados?
+Según la guía, los sistemas de navegación más utilizados son:
+	- Navegación global: aparece en todas las páginas y permite acceder a las principales secciones del sitio.
+	- Navegación local: facilita el recorrido dentro de una sección específica.
+	- Navegación contextual: ofrece enlaces relacionados con el contenido que el usuario está consultando.
+	- Navegación de cortesía: incluye accesos a páginas como contacto, ayuda, mapa del sitio o información institucional.
+
+12) ¿Qué es el diseño visual?
+El diseño visual es la etapa en la que se define la apariencia gráfica del sitio web. Comprende todos los aspectos relacionados con la presentación de la información, como colores, 
+tipografia, imágenes, íconos, etc.
+El objetivo es lograr un sitio atractivo, legible y coherente con la identidad de la organización, facilitando además la comprensión de los contenidos y la interacción del usuario.
+
+13) ¿Qué aspectos deben tenerse en cuenta al realizar el diseño visual de un sitio?
+Durante el diseño visual deben considerarse diversos aspectos para lograr una buena experiencia de uso:
+	- mantener una identidad visual uniforme;
+	- utilizar colores adecuados y con buen contraste;
+	- elegir tipografías legibles;
+	- organizar correctamente los espacios y la alineación;
+	- destacar la información importante mediante la jerarquía visual;
+	- mantener coherencia entre todas las páginas;
+	- evitar la sobrecarga de elementos gráficos
+
+14) ¿Qué es la usabilidad?
+La usabilidad es la característica que indica el grado de facilidad con que un usuario puede utilizar un sitio web para alcanzar sus objetivos de manera eficaz, eficiente y satisfactoria.
+
+15) ¿Qué significa que un sitio sea accesible?
+Un sitio es accesible cuando puede ser utilizado por todas las personas, independientemente de sus capacidades físicas, sensoriales o cognitivas, así como del dispositivo o navegador 
+que utilicen. Busca eliminar barreras que dificulten el acceso a la información y garantizar que cualquier persona pueda navegar e interactuar con el sitio en igualdad de condiciones.
+
+16) ¿Por qué es importante realizar pruebas antes de publicar un sitio web?
+Las pruebas permiten verificar que el sitio funcione correctamente antes de su publicación. Durante esta etapa se comprueba:
+	- el funcionamiento de los enlaces;
+	- la correcta navegación;
+	- el desempeño de formularios;
+	- la compatibilidad con distintos navegadores;
+	- la visualización en diferentes dispositivos;
+	- la ausencia de errores de contenido o programación.
+Realizar estas verificaciones ayuda a detectar y corregir problemas antes de que el sitio sea utilizado por los usuarios, mejorando su calidad y confiabilidad.
+
+PARTE 2 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) ¿Qué es una interfaz y cuáles son sus elementos fundamentales?
+La interfaz es el medio mediante el cual el usuario interactúa con un sitio web. Es la parte visible del sistema y su función es facilitar el acceso a la información y permitir que el 
+usuario realice las acciones que el sitio ofrece de manera clara, sencilla y eficiente. Los elementos fundamentales de una interfaz son:
+	- Elementos de identificación, como el logotipo y la identidad institucional.
+	- Sistema de navegación, que permite desplazarse entre las distintas secciones del sitio.
+	- Áreas de contenido, donde se presenta la información principal.
+	- Áreas de interacción, destinadas a realizar acciones como completar formularios, utilizar buscadores o enviar información.
+	- Elementos que mejoran la experiencia del usuario, favoreciendo una interacción simple y consistente.
+
+2) ¿Qué es un sistema de navegación y cuáles deben ser sus elementos indispensables?
+El sistema de navegación es el conjunto de elementos que permite al usuario recorrer un sitio web y acceder fácilmente a sus distintas páginas y contenidos. Su finalidad es que el
+usuario siempre sepa dónde se encuentra dentro del sitio y cómo llegar a cualquier otra sección.
+Los elementos indispensables que debe tener un sistema de navegación son:
+	- un menú principal visible y permanente
+	- enlaces claros hacia las principales secciones
+	- acceso a la página principal
+	- acceso al mapa del sitio, que reúne los enlaces de todo el contenido
+	- enlaces consistentes en todas las páginas para mantener la orientación del usuario.
+Un buen sistema de navegación debe ser simple, consistente y mantenerse igual en todas las páginas del sitio para facilitar su utilización.
+
+3) ¿Qué es Flash y qué problemas puede acarrear su uso?
+Flash es una tecnología desarrollada por Adobe (anteriormente Macromedia) que permite crear contenidos multimedia interactivos con animaciones,
+sonido, imágenes y video, aumentando las posibilidades de interacción gráfica de un sitio web.
+La guía indica que su uso puede presentar diversos problemas:
+	- recarga la presentación del sitio y aumenta el tiempo de carga
+	- puede impedir que los robots de los buscadores accedan al contenido interno del sitio, dificultando su indexación
+	- requiere que el usuario tenga instalado el complemento Flash Player
+	- puede generar problemas de accesibilidad para personas con discapacidad si no se ofrecen alternativas
+
+4) ¿Qué es AJAX y qué problemas puede acarrear su uso?
+AJAX (Asynchronous JavaScript and XML) es una combinación de tecnologías basada principalmente en JavaScript, XHTML/CSS, DOM, XMLHttpRequest y XML, que permite intercambiar información 
+con el servidor de forma asíncrona, actualizando parte de una página sin necesidad de recargarla completamente. Esto mejora la rapidez y la interacción de los sitios web.
+Sin embargo, la guía señala algunos inconvenientes:
+	- depende del uso de JavaScript; si el navegador tiene JavaScript deshabilitado, la aplicación AJAX deja de funcionar
+	- puede generar problemas de accesibilidad para algunos usuarios y dispositivos
