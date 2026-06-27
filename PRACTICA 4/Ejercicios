@@ -1,0 +1,36 @@
+1) Identificar
+a)  $a (Boolean), $b (String), $c	(String), $d	(Integer), $i	(Integer), $f	(Integer), $g	(Integer)
+b) Operadores utilizados 
+  - = asginacion 
+  - * multiplicación
+  - += suma
+  - ++ incremento
+  - ++$a preincremento
+  - $a++ postincremento
+  - (? :) operador ternario
+
+c) FUNCIONES
+  - doble($i) --> Parametro $i
+  - gettype($a) --> parametro $a  obtiene el tipo de la variable
+  - is_int($d) --> paraemtro $d   comprueba si la variable es entera
+  - is_string($a) --> parametro $a   comprueba si la variable es una cadena 
+  - echo   muestra informacion por pantalla
+
+d) ESTRUCTURAS DE CONTROL
+  - if(is_int($d))
+  - if(is_string($a))
+
+e) El resultado final que se muestra en pantalla es: 
+boolean
+string
+string
+integer
+1xyzxyz184444
+----------------------------------------------------------------------------------------------------------------
+2) ANALIZAR EQUIVALENCIA DE CÓDIGOS 
+  a) Sí, los tres códigos son equivalentes, porque producen exactamente la misma salida: 12345678910
+  b) Sí, los cuatro códigos son equivalentes, porque todos generan exactamente la misma salida: 12345678910
+  c) Sí, ambos códigos son equivalentes, ya que para los mismos valores de la variable $i producen exactamente la misma salida
+
+3) EXPLICAR CÓDIGO
+  a) 
