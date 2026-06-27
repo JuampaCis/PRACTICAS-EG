@@ -1,0 +1,78 @@
+1) Completar
+  a) mysqli_connect()
+  b) $hostname, $nombreUsuario, $contraseña
+  c) mysqli_select_db()
+  d) el identificador de la conexión y el nombre de la base de datos
+  e) Ejecutar una consulta SQL sobre la base de datos
+  f) $link → conexión y $consulta → sentencia SQL
+  g) Capturar un error y detener la ejecución del programa mostrando un mensaje
+  h) Obtener el último mensaje de error producido por MySQL
+EXPLICACIÓN DEL CÓDIGO:
+El código conecta PHP con una base de datos MySQL, selecciona la base de datos que se va a utilizar y ejecuta una consulta SQL. Si la consulta devuelve registros, 
+los recorre uno por uno mediante un ciclo while utilizando mysqli_fetch_array(), mostrando cada fila en una tabla HTML. Al finalizar, libera la memoria ocupada por el resultado y 
+cierra la conexión con la base de datos para finalizar correctamente el proceso.
+
+2) 
+CREATE DATABASE Capitales;
+CREATE TABLE ciudades(
+id INT AUTO_INCREMENT PRIMARY KEY,
+ciudad VARCHAR(50),
+pais VARCHAR(50),
+habitantes INT,
+superficie FLOAT,
+tieneMetro TINYINT
+);
+
+INSERT INTO ciudades(ciudad,pais,habitantes,superficie,tieneMetro)
+VALUES ('Barcelona','España',444333,1111.11,0),
+('Buenos Aires','Argentina',888111,333.33,1),
+('Medellín','Colombia',999222,888.88,0),
+
+<?php   //*CONECCION PHP*//
+$link=mysqli_connect("localhost","root","");
+mysqli_select_db($link,"Capitales");
+?>
+
+<html>
+<body>
+<h2>ABML DE CIUDADES</h2>
+<a href="alta.html">Alta</a>
+<br><br>
+<a href="baja.html">Baja</a>
+<br><br>
+<a href="modificar.html">Modificar</a>
+<br><br>
+<a href="listar.php">Listado</a>
+<br><br>
+<a href="listarPaginado.php">Listado con paginación</a>
+</body>
+</html>
+
+<form action="alta.php" method="post">  //*ALTA*//
+Ciudad
+<input type="text" name="ciudad"><br><br>
+País
+<input type="text" name="pais"><br><br>
+Habitantes
+<input type="text" name="habitantes"><br><br>
+Superficie
+<input type="text" name="superficie"><br><br>
+Tiene Metro
+<input type="text" name="metro"><br><br>
+<input type="submit" value="Guardar">
+</form>
+
+<?php
+include("conexion.php");
+$sql="INSERT INTO ciudades
+(ciudad,pais,habitantes,superficie,tieneMetro)
+VALUES
+('$_POST[ciudad]',
+'$_POST[pais]',
+'$_POST[habitantes]',
+'$_POST[superficie]',
+'$_POST[metro]')";
+mysqli_query($link,$sql);
+echo "registro agregado correctamente.";
+mysqli_close($link);
+?>
