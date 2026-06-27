@@ -1,0 +1,154 @@
+7)
+CREATE DATABASE Compras;
+CREATE TABLE catalogo(
+id INT AUTO_INCREMENT PRIMARY KEY,
+producto VARCHAR(100),
+precio DECIMAL(9,2)
+);
+
+<?php
+session_start();
+$link=mysqli_connect("localhost","root","","Compras");
+$resultado=mysqli_query($link,"SELECT * FROM catalogo");
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Catálogo</title>
+</head>
+<body>
+<h2>Catálogo de Productos</h2>
+<table border="1">
+<tr>
+<th>Producto</th>
+<th>Precio</th>
+<th>Acción</th>
+</tr>
+<?php
+while($fila=mysqli_fetch_array($resultado)){
+?>
+<tr>
+<td><?php echo $fila["producto"]; ?></td>
+<td>$<?php echo $fila["precio"]; ?></td>
+<td>
+<a href="agregar.php?id=<?php echo $fila["id"];?>">
+Agregar al carrito
+</a>
+</td>
+</td>
+<?php
+}
+?>
+</table>
+<br>
+<a href="vercarrito.php">Ver Carrito</a>
+</body>
+</html>
+
+AGREGAR.PHP -----------------------------------------
+<?php
+session_start();
+$link=mysqli_connect("localhost","root","","Compras");
+$id=$_GET["id"];
+$sql="SELECT * FROM catalogo WHERE id=$id";
+$resultado=mysqli_query($link,$sql);
+$fila=mysqli_fetch_array($resultado);
+$_SESSION["carrito"][$id]=$fila;
+header("Location:catalogo.php");
+?>
+
+VERCARRITO.PHP --------------------------------------
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Carrito</title>
+</head>
+<body>
+<h2>Productos Seleccionados</h2>
+<?php
+$total=0;
+if(isset($_SESSION["carrito"])){
+echo "<table border='1'>";
+echo "<tr>";
+echo "<th>Producto</th>";
+echo "<th>Precio</th>";
+echo "</tr>";
+foreach($_SESSION["carrito"] as $producto){
+echo "<tr>";
+echo "<td>".$producto["producto"]."</td>";
+echo "<td>$".$producto["precio"]."</td>";
+echo "</tr>";
+$total+=$producto["precio"];
+}
+echo "</table>";
+echo "<br>";
+echo "<h3>Total: $".$total."</h3>";
+}else{
+echo "No hay productos seleccionados.";
+}
+?>
+<br>
+<a href="catalogo.php">Seguir comprando</a>
+</body>
+</html>
+
+8) --------------------------------------------------------------------------------------------------------------------------
+CREATE DATABASE prueba;
+CREATE TABLE buscador(
+id INT AUTO_INCREMENT PRIMARY KEY,
+canciones VARCHAR(150)
+);
+
+CONEXION-----------
+<?php
+$link=mysqli_connect("localhost","root","","prueba");
+?>
+
+FORM BUSCADOR--------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buscador</title>
+</head>
+<body>
+<form action="buscador.php" method="post">
+Ingrese una canción:
+<input type="text" name="Palabra">
+<input type="submit" value="Buscar">
+</form>
+</body>
+</html>
+
+BUSCADOR.PHP ------------------------------------
+<?php
+include("conexion.inc");
+$pal=$_POST["Palabra"];
+$sql="SELECT * FROM buscador WHERE canciones LIKE '%$pal%'";
+$resultado=mysqli_query($link,$sql);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resultado</title>
+</head>
+<body>
+<h2>Resultados</h2>
+<?php
+if(mysqli_num_rows($resultado)==0){
+echo "No se encontraron resultados.";
+}else{
+while($fila=mysqli_fetch_array($resultado)){
+echo $fila["canciones"];
+echo "<br>";
+}
+}
+?>
+<br><br>
+<a href="FormBuscador.html">
+Nueva búsqueda
+</a>
+</body>
+</html>
