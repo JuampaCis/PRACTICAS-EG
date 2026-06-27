@@ -1,0 +1,114 @@
+1) De la forma en que lo entendí: 
+<?php
+
+$destinatario = "destinatario@gmail.com";
+$asunto = "Prueba de correo HTML";
+$cuerpo = '
+<html>
+<head>
+<title>Correo HTML</title>
+</head>
+<body>
+<h2>Bienvenido</h2>
+<p>Este es un <b>correo enviado con PHP</b>.</p>
+<p>La función mail() permite enviar correos electrónicos desde el servidor.</p>
+</body>
+</html>
+';
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type:text/html; charset=iso-8859-1\r\n";
+$headers .= "From: Nico <nico@gmail.com>\r\n";
+mail($destinatario,$asunto,$cuerpo,$headers);
+echo "Correo enviado correctamente.";
+?>
+
+2) 
+<html>
+<body>
+<form action="enviar.php" method="post">
+Nombre
+<input type="text" name="nombre">
+<br><br>
+Email
+<input type="email" name="email">
+<br><br>
+Consulta
+<br>
+<textarea name="consulta" rows="6" cols="40"></textarea>
+<br><br>
+<input type="submit" value="Enviar">
+</form>
+</body>
+</html>
+
+<?php
+$destino="webmaster@gmail.com";
+$asunto="Consulta desde la página";
+$mensaje="
+Nombre: ".$_POST['nombre']."
+Email: ".$_POST['email']."
+Consulta:
+".$_POST['consulta'];
+$desde="From: ".$_POST['email'];
+mail($destino,$asunto,$mensaje,$desde);
+echo "Su consulta fue enviada correctamente.";
+?>
+
+3) 
+<html>
+<body>
+<form action="recomendar.php" method="post">
+Nombre
+<input type="text" name="nombre">
+<br><br>
+Email del amigo
+<input type="email" name="amigo">
+<br><br>
+<input type="submit" value="Recomendar">
+</form>
+</body>
+</html>
+
+<?php
+$destino=$_POST['amigo'];
+$asunto="Te recomiendo visitar este sitio";
+$mensaje="
+Hola.
+".$_POST['nombre']."
+te recomienda visitar nuestro sitio web.
+Saludos.";
+mail($destino,$asunto,$mensaje);
+echo "La recomendación fue enviada.";
+?>
+
+4) 
+<?php
+session_start();
+if(!isset($_SESSION["contador"])){
+$_SESSION["contador"]=1;
+}
+else{
+$_SESSION["contador"]++;
+}
+?>
+<html>
+<body>
+<h2>Bienvenido</h2>
+<a href="cant_visitas.php">Ir a otra página</a>
+</body>
+</html>
+
+CANT_VISITAS.PHP  <?php
+session_start();
+?>
+<html>
+<body>
+<?php
+echo "Has visitado ".$_SESSION["contador"]." páginas.";
+?>
+<br><br>
+<a href="cuenta.php">
+Volver
+</a>
+</body>
+</html>
