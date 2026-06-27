@@ -1,1 +1,271 @@
+1) <?php
+if(isset($_POST["estilo"])){
+    $estilo=$_POST["estilo"];
+    setcookie("estilo",$estilo,time()+60*60*24*90);
+}else{
+    if(isset($_COOKIE["estilo"])){
+        $estilo=$_COOKIE["estilo"];
+    }
+}
+?>
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cookies CSS</title>
+<?php
+if(isset($estilo)){
+    echo "<link rel='stylesheet' href='".$estilo.".css'>";
+}
+?>
+</head>
+<body>
+<h2>Seleccione un estilo</h2>
+<form action="ejemplo_cookies.php" method="post">
+<select name="estilo">
+<option value="verde">Verde</option>
+<option value="rosa">Rosa</option>
+<option value="negro">Negro</option>
+</select>
+<input type="submit" value="Actualizar estilo">
+</form>
+</body>
+</html>
+
+CREAMOS 3 ARCHIVOS .CSS DISTINTOS (NEGRO.CSS, VERDE.CSS, ROSA.CSS) CON EL SIGUIENTE CÓDIGO
+body{
+    background:black; //*Color varia entre negro, verde y rosa*//
+    color:white;
+    font-family:Verdana;
+}
+
+2) -------------------------------------------------------------------------------------------------------------------------------------
+<?php
+if(!isset($_COOKIE["visitas"])){
+    $visitas=1;
+    setcookie("visitas",$visitas,time()+3600*24*365);
+}else{
+    $visitas=$_COOKIE["visitas"]+1;
+    setcookie("visitas",$visitas,time()+3600*24*365);
+}
+?>
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+if($visitas==1){
+    echo "Bienvenido. Es la primera vez que visita esta página.";
+}else{
+    echo "Esta es su visita número ".$visitas;
+}
+?>
+</body>
+</html>
+
+3) ---------------------------------------------------------------------------------------------------------------------------------------
+<?php
+if(isset($_POST["usuario"])){
+    $usuario=$_POST["usuario"];
+    setcookie("usuario",$usuario,time()+3600*24*365);
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usuarios</title>
+</head>
+<body>
+<?php
+if(isset($_COOKIE["usuario"])){
+echo "Último usuario ingresado: ".$_COOKIE["usuario"]."<br><br>";
+}
+?>
+<form method="post">
+Ingrese Usuario:
+<input type="text" name="usuario">
+<input type="submit" value="Guardar">
+</form>
+</body>
+</html>
+
+4) ---------------------------------------------------------------------------------------------------------------------------------------
+<?php
+if(isset($_POST["titular"])){
+$titular=$_POST["titular"];
+setcookie("titular",$titular,time()+3600*24*365);
+}else{
+if(isset($_COOKIE["titular"])){
+$titular=$_COOKIE["titular"];
+}
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Periódico</title>
+</head>
+<body>
+<h1>Periódico Online</h1>
+<form method="post">
+<input type="radio" name="titular" value="politica"> Política
+<input type="radio" name="titular" value="economia"> Economía
+<input type="radio" name="titular" value="deportes"> Deportes
+<br><br>
+<input type="submit" value="Guardar Preferencia">
+</form>
+<hr>
+<?php
+if(!isset($titular)){
+echo "<h2>Noticia Política</h2>";
+echo "<p>El Congreso aprobó una nueva ley.</p>";
+echo "<h2>Noticia Económica</h2>";
+echo "<p>La inflación mostró una baja este mes.</p>";
+echo "<h2>Noticia Deportiva</h2>";
+echo "<p>El equipo local ganó el campeonato.</p>";
+}else{
+if($titular=="politica"){
+echo "<h2>Noticia Política</h2>";
+echo "<p>El Congreso aprobó una nueva ley.</p>";
+}
+if($titular=="economia"){
+echo "<h2>Noticia Económica</h2>";
+echo "<p>La inflación mostró una baja este mes.</p>";
+}
+if($titular=="deportes"){
+echo "<h2>Noticia Deportiva</h2>";
+echo "<p>El equipo local ganó el campeonato.</p>";
+}
+}
+?>
+<br><br>
+<a href="borrarcookie.php">Borrar Preferencia</a>
+</body>
+</html>
+
+5) ---------------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+<form action="pagina2.php" method="post">
+Usuario:
+<input type="text" name="usuario">
+<br><br>
+Clave:
+<input type="password" name="clave">
+<br><br>
+<input type="submit" value="Ingresar">
+</form>
+</body>
+</html>
+
+pagina 2 php----------------------------
+<?php
+session_start();
+$_SESSION["usuario"]=$_POST["usuario"];
+$_SESSION["clave"]=$_POST["clave"];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sesión creada</title>
+</head>
+<body>
+<h2>Variables de sesión creadas correctamente.</h2>
+<a href="pagina3.php">Ir a la página siguiente</a>
+</body>
+</html>
+
+página 3 -----------------------------------------
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Variables de Sesión</title>
+</head>
+<body>
+<h2>Datos recuperados</h2>
+Usuario:
+<?php
+echo $_SESSION["usuario"];
+?>
+<br><br>
+Clave:
+<?php
+echo $_SESSION["clave"];
+?>
+</body>
+</html>
+
+6) -----------------------------------------------------------------------------------------------------------------
+CREATE DATABASE base2;
+CREATE TABLE alumnos(
+codigo INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(100),
+codigocurso INT,
+mail VARCHAR(100)
+);
+
+CONEXIÓN-----------
+<?php
+$link=mysqli_connect("localhost","root","","base2");
+if(!$link){
+die("Error de conexión");
+}?>
+
+SESIONES.PHP -----------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buscar Alumno</title>
+</head>
+<body>
+<form action="pagina2.php" method="post">
+Ingrese el mail del alumno:
+<input type="text" name="mail">
+<br><br>
+<input type="submit" value="Buscar">
+</form>
+</body>
+</html>
+
+PÁGINA 2 ----------------------------------------
+<?php
+session_start();
+include("conexion.inc");
+$mail=$_POST["mail"];
+$sql="SELECT * FROM alumnos WHERE mail='$mail'";
+$resultado=mysqli_query($link,$sql);
+if(mysqli_num_rows($resultado)==0){
+echo "Alumno inexistente.";
+}else{
+$fila=mysqli_fetch_array($resultado);
+$_SESSION["nombre"]=$fila["nombre"];
+echo "Alumno encontrado.<br><br>";
+echo "<a href='pagina3.php'>Ingresar</a>";
+} ?>
+
+PÁGINA 3 ------------------------------------------
+<?php
+session_start();?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bienvenida</title>
+</head>
+<body>
+<?php
+if(isset($_SESSION["nombre"])){
+echo "<h2>Bienvenido ".$_SESSION["nombre"]."</h2>";
+}else{
+echo "<h2>No tiene permitido visitar esta página.</h2>";
+}
+session_destroy();
+?>
+</body>
+</html>
